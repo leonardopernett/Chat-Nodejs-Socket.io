@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chat javascript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    
+   <nav class="navbar navbar-light bg-warning">
+     <a href="" class="navbar-brand mx-auto">javascript Fullstack Chat</a>
+   </nav>
+
+   <div class="card col-md-4 mt-5 mx-auto" id="nick">
+         <div class="card-header">
+             enter your username
+         </div>
+         <div class="card-body">
+             <p id="error"></p>
+             <form id="nick-form">
+                <input type="text" class="form-control"  id="nickname">
+                <button type="submit" class="btn btn-warning mt-2">
+                        <i class="fa fa-location-arrow">send</i>
+                </button>
+              </form>
+         </div>
+   </div>
+
+   <div class="container mt-5" id="contenendor-wrap">
+       <div class="row">
+           <div class="col-md-5 mt-4">
+               <div class="card">
+                   <div class="card-header text-dark">
+                       let's Chat
+                   </div>
+                   <div class="card-body" id="chat">
+                       
+                   </div>
+                   <form class="card-footer" id=message-form>
+                       <div class="input-group">
+                           <input type="text" id="message" placeholder="write here" class="form-control">
+                           <button type="submit" class="btn btn-warning ">
+                              <i class="fa fa-location-arrow"></i> send
+                            </button>
+                        </div> 
+                   </form>
+               </div>
+           </div>
+
+           <div class="col-md-3 mt-4">
+               <div class="card">
+                   <div class="card-header">
+                       users
+                   </div>
+
+                   <div class="card-body">
+                       <div id="username"></div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
